@@ -1,8 +1,31 @@
 {
-    "name": "integration-test-depbot-php",
-    "minimum-stability": "dev",
+    "name": "integration-test-depbot-php/php-test",
+    "type": "library",
+    "description": "test",
+    "keywords": ["url", "manipulation"],
+    "homepage": "http://github.com/PackageAware/integration-test-depbot-php",
+    "license": "Unlicensed",
+    "authors": [
+        {"name": "Test", "email": "test@contoso.com"}
+    ],
+    "autoload": {
+        "psr-4": {"php-test\\": "src/php-test"}
+    },
+    "autoload-dev": {
+        "psr-4": {"php-test\\Test\\": "test/php-test/Test"}
+    },
+    "config": {
+        "sort-packages": true
+    },
     "require": {
+        "php": "^7.2",
         "composer/installers": "1.0.20",
         "guzzlehttp/guzzle": "7.4.0",
-    }
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "^6.0",
+        "phpstan/phpstan": "^0.11.5",
+        "phpstan/phpstan-strict-rules": "^0.11.0",
+        "phpunit/phpunit": "^8.1"
+    },
 }
