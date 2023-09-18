@@ -1,26 +1,24 @@
 {
-    "name": "integration-test-depbot-php/php-test",
+    "name": "jwage/purl",
     "type": "library",
-    "description": "test",
+    "description": "URL Manipulation for PHP 5.3",
     "keywords": ["url", "manipulation"],
-    "homepage": "http://github.com/PackageAware/integration-test-depbot-php",
-    "license": "Unlicensed",
+    "homepage": "http://github.com/jwage/purl",
+    "license": "MIT",
     "authors": [
-        {"name": "Test", "email": "test@contoso.com"}
+        {"name": "Jonathan H. Wage", "email": "jonwage@gmail.com"}
     ],
     "autoload": {
-        "psr-4": {"php-test\\": "src/php-test"}
+        "psr-4": {"Purl\\": "src/Purl"}
     },
     "autoload-dev": {
-        "psr-4": {"php-test\\Test\\": "test/php-test/Test"}
+        "psr-4": {"Purl\\Test\\": "tests/Purl/Test"}
     },
     "config": {
         "sort-packages": true
     },
     "require": {
-        "php": "^7.2",
-        "composer/installers": "1.0.20",
-        "guzzlehttp/guzzle": "7.4.0",
+        "php": "^7.2"
     },
     "require-dev": {
         "doctrine/coding-standard": "^6.0",
@@ -28,4 +26,9 @@
         "phpstan/phpstan-strict-rules": "^0.11.0",
         "phpunit/phpunit": "^8.1"
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }
